@@ -1,60 +1,50 @@
-// Experiment 2: Binary Search
-// Aim: To search a given key element in a sorted array using the Binary Search algorithm.
-
 #include <stdio.h>
 
 int main()
 {
-    int A[50], N, key;
-    int beg, end, mid, flag = 0;
+    int a[100], n, key;
+    int beg, end, mid;
+    int found = 0;
+    int i;
 
     printf("Enter number of elements: ");
-    scanf("%d", &N);
+    scanf("%d", &n);
 
-    printf("Enter sorted elements:\n");
-    for(int i = 0; i < N; i++)
-        scanf("%d", &A[i]);
+    printf("Enter %d elements in sorted order: ", n);
+    for (i = 0; i < n; i++)
+        scanf("%d", &a[i]);
 
     printf("Enter key to search: ");
     scanf("%d", &key);
 
     beg = 0;
-    end = N - 1;
+    end = n - 1;
 
-    while(beg <= end)
+    // ELI10: Keep cutting the search area into half.
+    while (beg <= end)
     {
         mid = (beg + end) / 2;
 
-        if(A[mid] == key)
+        if (a[mid] == key)
         {
-            printf("Element found at position %d", mid);
-            flag = 1;
+            printf("Key found at position %d\n", mid + 1);
+            found = 1;
             break;
         }
-        else if(A[mid] > key)
+        else if (a[mid] > key)
+        {
+            // ELI10: Key is smaller, so search the left half.
             end = mid - 1;
+        }
         else
+        {
+            // ELI10: Key is bigger, so search the right half.
             beg = mid + 1;
+        }
     }
 
-    if(flag != 1)
-        printf("Element not found");
+    if (!found)
+        printf("Key not found\n");
 
     return 0;
 }
-
-
-//Sample Input & Output:
-/*
-Enter number of elements: 6
-Enter sorted elements:
-5 10 15 20 25 30
-Enter key to search: 20
-
-Element found at position 3
-*/
-
-// Binary Search works only on sorted arrays
-// Time Complexity: O(log n)
-// Space Complexity: O(1)
-// Faster than Linear Search
