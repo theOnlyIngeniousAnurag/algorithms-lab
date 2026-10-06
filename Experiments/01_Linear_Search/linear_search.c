@@ -1,48 +1,39 @@
-// Experiment 1: Linear Search
-// Aim: To search a given key element in an array using the Linear Search algorithm.
 
 #include <stdio.h>
 
 int main()
 {
-    int A[50], N, key, i, flag = 0;
+    int a[100], n, key;
+    int i, found = 0;
 
     printf("Enter number of elements: ");
-    scanf("%d", &N);
+    scanf("%d", &n);
 
-    printf("Enter elements:\n");
-    for(i = 0; i < N; i++)
-        scanf("%d", &A[i]);
+    printf("Enter %d elements: ", n);
+    for (i = 0; i < n; i++)
+        scanf("%d", &a[i]);
 
     printf("Enter key to search: ");
     scanf("%d", &key);
 
-    for(i = 0; i < N; i++)
+    // Check each element one by one until the key is found.
+    for (i = 0; i < n; i++)
     {
-        if(A[i] == key)
+        if (a[i] == key)
         {
-            printf("Element found at position %d", i);
-            flag = 1;
+            printf("Key found at position %d\n", i + 1);
+            found = 1;
             break;
         }
     }
 
-    if(flag != 1)
-        printf("Element not found");
+    // If we checked everything and found nothing, the key is absent.
+    if (!found)
+        printf("Key not found\n");
 
     return 0;
 }
 
 
-//Sample Input & Output
-/* Enter number of elements: 5
-Enter elements:
-10 20 30 40 50
-Enter key to search: 30
-
- Element found at position 2
-*/
-
-// Linear Search works on both sorted and unsorted arrays
 // Time Complexity: O(n)
 // Space Complexity: O(1)
