@@ -95,6 +95,13 @@ Each lab is kept in its own folder so that experiments can be added without mixi
 | Lab | Main Topic | Status |
 |---|---|---|
 | 01 | Linear Search & Binary Search | ✅ Completed |
+| 02 | Random Test Cases, CPU Time & Complexity Analysis | ✅ Completed |
+| 03 | Best, Average & Worst Case Analysis of Linear and Binary Search | ✅ Completed |
+| 04 | Bubble Sort & Insertion Sort with Time Complexity Analysis | ✅ Completed |
+| 05 | Selection Sort with Time Complexity Analysis | ✅ Completed |
+| 06 | Insertion Sort Using Doubly Linked List with Time Complexity Analysis | ✅ Completed |
+| 07 | Merge Sort with Time Complexity Analysis | ✅ Completed |
+| 08 | Quick Sort with Time Complexity Analysis | ✅ Completed |
 | 02 | — | ⏳ To be added |
 | 03 | — | ⏳ To be added |
 | 04 | — | ⏳ To be added |
