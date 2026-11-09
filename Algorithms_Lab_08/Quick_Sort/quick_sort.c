@@ -5,7 +5,6 @@
 /*
    Partition the array around the first element.
 
-   ELI10:
    Pick the first value as the pivot and move smaller values
    to the left and larger values to the right.
 */
@@ -52,7 +51,6 @@ int partition(int a[], int low, int high)
 /*
    Quick Sort using the first element as pivot.
 
-   ELI10:
    Put one element in its correct position, then sort
    everything before and after it.
 */
